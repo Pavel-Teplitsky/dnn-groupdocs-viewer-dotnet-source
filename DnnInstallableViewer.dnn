@@ -109,10 +109,10 @@
             <install>
               <configuration>
                 <nodes>
-                  <node path="/configuration/system.web/httpModules" action="update" key="path" collision="overwrite">
+                  <node path="/configuration/system.web/httpModules" action="update" key="name" collision="overwrite">
                     <add name="AllowCrossOriginModule" type="Groupdocs.Web.UI.HttpModules.AllowCrossOriginModule, Groupdocs.Viewer, Culture=neutral" />
                   </node>
-                  <node path="/configuration/system.web/httpHandlers" action="update" key="path" collision="overwrite">
+                  <node path="/configuration/system.web/httpHandlers" action="update" key="name" collision="overwrite">
                     <add verb="OPTIONS" path="*" type="Groupdocs.Web.UI.Handlers.CrossOriginHandler, Groupdocs.Viewer, Culture=neutral" />
                     <add verb="*" path="document-viewer/ViewDocumentHandler" type="Groupdocs.Web.UI.Handlers.ViewDocumentHandler, Groupdocs.Viewer, Culture=neutral" validate="false" />
                     <add verb="*" path="document-viewer/GetDocumentPageImageHandler" type="Groupdocs.Web.UI.Handlers.GetDocumentPageImageHandler, Groupdocs.Viewer, Culture=neutral" validate="false" />
@@ -126,6 +126,9 @@
                     <add verb="GET,POST" path="document-viewer/GetPdfWithPrintDialogHandler" type="Groupdocs.Web.UI.Handlers.GetPdfWithPrintDialogHandler, Groupdocs.Viewer, Culture=neutral" validate="false" />
                     <add verb="GET,POST" path="document-viewer/GetPrintableHtmlHandler" type="Groupdocs.Web.UI.Handlers.GetPrintableHtmlHandler, Groupdocs.Viewer, Culture=neutral" />
                   </node>
+
+                  
+                  
                   <node path="/configuration/system.webServer/modules" action="update" key="name" collision="overwrite">
                     <add name="AllowCrossOriginModule" preCondition="managedHandler" type="Groupdocs.Web.UI.HttpModules.AllowCrossOriginModule, Groupdocs.Viewer, Culture=neutral" />
                   </node>
