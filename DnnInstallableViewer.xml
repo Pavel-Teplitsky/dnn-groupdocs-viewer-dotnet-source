@@ -112,82 +112,6 @@
             Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
             </remarks>
         </member>
-        <member name="T:DotNetNuke.Modules.DnnInstallableViewer.Edit">
-            -----------------------------------------------------------------------------
-            <summary>
-            The EditDnnInstallableViewer class is used to manage content
-            
-            Typically your edit control would be used to create new content, or edit existing content within your module.
-            The ControlKey for this control is "Edit", and is defined in the manifest (.dnn) file.
-            
-            Because the control inherits from DnnInstallableViewerModuleBase you have access to any custom properties
-            defined there, as well as properties from DNN such as PortalId, ModuleId, TabId, UserId and many more.
-            
-            </summary>
-            -----------------------------------------------------------------------------
-        </member>
-        <member name="M:DotNetNuke.Modules.DnnInstallableViewer.Edit.Page_Load(System.Object,System.EventArgs)">
-            -----------------------------------------------------------------------------
-            <summary>
-            Page_Load runs when the control is loaded
-            </summary>
-            -----------------------------------------------------------------------------
-        </member>
-        <member name="F:DotNetNuke.Modules.DnnInstallableViewer.Edit.Title">
-            <summary>
-            Title элемент управления.
-            </summary>
-            <remarks>
-            Автоматически создаваемое поле.
-            Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
-            </remarks>
-        </member>
-        <member name="F:DotNetNuke.Modules.DnnInstallableViewer.Edit.txtDescription">
-            <summary>
-            txtDescription элемент управления.
-            </summary>
-            <remarks>
-            Автоматически создаваемое поле.
-            Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
-            </remarks>
-        </member>
-        <member name="F:DotNetNuke.Modules.DnnInstallableViewer.Edit.cmdUpdate">
-            <summary>
-            cmdUpdate элемент управления.
-            </summary>
-            <remarks>
-            Автоматически создаваемое поле.
-            Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
-            </remarks>
-        </member>
-        <member name="F:DotNetNuke.Modules.DnnInstallableViewer.Edit.cmdCancel">
-            <summary>
-            cmdCancel элемент управления.
-            </summary>
-            <remarks>
-            Автоматически создаваемое поле.
-            Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
-            </remarks>
-        </member>
-        <member name="T:DotNetNuke.Modules.DnnInstallableViewer.Components.FeatureController">
-            -----------------------------------------------------------------------------
-            <summary>
-            The Controller class for DnnInstallableViewer
-            
-            The FeatureController class is defined as the BusinessController in the manifest file (.dnn)
-            DotNetNuke will poll this class to find out which Interfaces the class implements. 
-            
-            The IPortable interface is used to import/export content from a DNN module
-            
-            The ISearchable interface is used by DNN to index the content of a module
-            
-            The IUpgradeable interface allows module developers to execute code during the upgrade 
-            process for a module.
-            
-            Below you will find stubbed out implementations of each, uncomment and populate with your own data
-            </summary>
-            -----------------------------------------------------------------------------
-        </member>
         <member name="T:DotNetNuke.Modules.DnnInstallableViewer.View">
             -----------------------------------------------------------------------------
             <summary>
@@ -246,6 +170,92 @@
             </summary>
             -----------------------------------------------------------------------------
         </member>
+        <member name="T:DotNetNuke.Modules.DnnInstallableViewer.Components.FeatureController">
+            -----------------------------------------------------------------------------
+            <summary>
+            The Controller class for DnnInstallableViewer
+            
+            The FeatureController class is defined as the BusinessController in the manifest file (.dnn)
+            DotNetNuke will poll this class to find out which Interfaces the class implements. 
+            
+            The IPortable interface is used to import/export content from a DNN module
+            
+            The ISearchable interface is used by DNN to index the content of a module
+            
+            The IUpgradeable interface allows module developers to execute code during the upgrade 
+            process for a module.
+            
+            Below you will find stubbed out implementations of each, uncomment and populate with your own data
+            </summary>
+            -----------------------------------------------------------------------------
+        </member>
+        <member name="T:DotNetNuke.Modules.DnnInstallableViewer.Edit">
+            -----------------------------------------------------------------------------
+            <summary>
+            The EditDnnInstallableViewer class is used to manage content
+            
+            Typically your edit control would be used to create new content, or edit existing content within your module.
+            The ControlKey for this control is "Edit", and is defined in the manifest (.dnn) file.
+            
+            Because the control inherits from DnnInstallableViewerModuleBase you have access to any custom properties
+            defined there, as well as properties from DNN such as PortalId, ModuleId, TabId, UserId and many more.
+            
+            </summary>
+            -----------------------------------------------------------------------------
+        </member>
+        <member name="M:DotNetNuke.Modules.DnnInstallableViewer.Edit.Page_Load(System.Object,System.EventArgs)">
+            -----------------------------------------------------------------------------
+            <summary>
+            Page_Load runs when the control is loaded
+            </summary>
+            -----------------------------------------------------------------------------
+        </member>
+        <member name="F:DotNetNuke.Modules.DnnInstallableViewer.Edit.Title">
+            <summary>
+            Title элемент управления.
+            </summary>
+            <remarks>
+            Автоматически создаваемое поле.
+            Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.Modules.DnnInstallableViewer.Edit.txtDescription">
+            <summary>
+            txtDescription элемент управления.
+            </summary>
+            <remarks>
+            Автоматически создаваемое поле.
+            Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.Modules.DnnInstallableViewer.Edit.cmdUpdate">
+            <summary>
+            cmdUpdate элемент управления.
+            </summary>
+            <remarks>
+            Автоматически создаваемое поле.
+            Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.Modules.DnnInstallableViewer.Edit.cmdCancel">
+            <summary>
+            cmdCancel элемент управления.
+            </summary>
+            <remarks>
+            Автоматически создаваемое поле.
+            Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
+            </remarks>
+        </member>
+        <member name="T:DotNetNuke.Modules.DnnInstallableViewer.Data.DataProvider">
+            -----------------------------------------------------------------------------
+            <summary>
+            An abstract class for the data access layer
+            
+            The abstract data provider provides the methods that a control data provider (sqldataprovider)
+            must implement. You'll find two commented out examples in the Abstract methods region below.
+            </summary>
+            -----------------------------------------------------------------------------
+        </member>
         <member name="T:DotNetNuke.Modules.DnnInstallableViewer.Data.SqlDataProvider">
             -----------------------------------------------------------------------------
             <summary>
@@ -255,16 +265,6 @@
             from data dataprovider.cs
             
             In most cases you will only modify the Public methods region below.
-            </summary>
-            -----------------------------------------------------------------------------
-        </member>
-        <member name="T:DotNetNuke.Modules.DnnInstallableViewer.Data.DataProvider">
-            -----------------------------------------------------------------------------
-            <summary>
-            An abstract class for the data access layer
-            
-            The abstract data provider provides the methods that a control data provider (sqldataprovider)
-            must implement. You'll find two commented out examples in the Abstract methods region below.
             </summary>
             -----------------------------------------------------------------------------
         </member>
