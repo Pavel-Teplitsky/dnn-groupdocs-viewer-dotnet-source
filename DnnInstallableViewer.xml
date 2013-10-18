@@ -190,6 +190,15 @@
             Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
             </remarks>
         </member>
+        <member name="F:DotNetNuke.Modules.DnnInstallableViewer.View.UrlNameSufix">
+            <summary>
+            UrlNameSufix элемент управления.
+            </summary>
+            <remarks>
+            Автоматически создаваемое поле.
+            Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
+            </remarks>
+        </member>
         <member name="M:DotNetNuke.Modules.DnnInstallableViewer.View.Page_Load(System.Object,System.EventArgs)">
             -----------------------------------------------------------------------------
             <summary>

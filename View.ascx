@@ -5,35 +5,36 @@
 <asp:HiddenField runat="server" ID="Height" Value="600" />
 <asp:HiddenField runat="server" ID="DefaultFileName" />
 <asp:HiddenField runat="server" ID="UseHttpHandlers" Value="false" />
+<asp:HiddenField runat="server" ID="UrlNameSufix" Value="false" />
 
 <% if (URL.Value != null && URL.Value.Length > 0) %>
 <% { %>
-<!-- <script type='text/javascript' src='<%= URL.Value %>/document-viewer/GetScriptHandler?name=libs/jquery-1.9.1.min.js'></script> -->
-<!-- <script type='text/javascript' src='<%= URL.Value %>/document-viewer/GetScriptHandler?name=libs/jquery-ui-1.10.3.min.js'></script> -->
-<script type='text/javascript' src='<%= URL.Value %>/document-viewer/GetScriptHandler?name=libs/knockout-2.2.1.js'></script>
-<script type='text/javascript' src='<%= URL.Value %>/document-viewer/GetScriptHandler?name=libs/turn.min.js'></script>
-<script type='text/javascript' src='<%= URL.Value %>/document-viewer/GetScriptHandler?name=libs/modernizr.2.6.2.Transform2d.min.js'></script>
+<!-- <script type='text/javascript' src='<%= URL.Value %>/document-viewer/GetScript<%= UrlNameSufix.Value %>?name=libs/jquery-1.9.1.min.js'></script> -->
+<!-- <script type='text/javascript' src='<%= URL.Value %>/document-viewer/GetScript<%= UrlNameSufix.Value %>?name=libs/jquery-ui-1.10.3.min.js'></script> -->
+<script type='text/javascript' src='<%= URL.Value %>/document-viewer/GetScript<%= UrlNameSufix.Value %>?name=libs/knockout-2.2.1.js'></script>
+<script type='text/javascript' src='<%= URL.Value %>/document-viewer/GetScript<%= UrlNameSufix.Value %>?name=libs/turn.min.js'></script>
+<script type='text/javascript' src='<%= URL.Value %>/document-viewer/GetScript<%= UrlNameSufix.Value %>?name=libs/modernizr.2.6.2.Transform2d.min.js'></script>
 <script type='text/javascript'>
 	if (!window.Modernizr.csstransforms) {
 		$.ajax({
-		    url: '<%= URL.Value %>/document-viewer/GetScriptHandler?name=libs/turn.html4.min.js',
+		    url: '<%= URL.Value %>/document-viewer/GetScript<%= UrlNameSufix.Value %>?name=libs/turn.html4.min.js',
 		    dataType: 'script',
 		    type: 'GET',
 		    async: false
 		});
 	}
 </script>
-<script type='text/javascript' src='<%= URL.Value %>/document-viewer/GetScriptHandler?name=installableViewer.min.js'></script>
+<script type='text/javascript' src='<%= URL.Value %>/document-viewer/GetScript<%= UrlNameSufix.Value %>?name=installableViewer.min.js'></script>
 <script type='text/javascript'>
 	$.fn.jGroupdocsViewer.applicationPath = '<%= URL.Value %>/';
 </script>
 <script type='text/javascript'>
 	$.fn.jGroupdocsViewer.useHttpHandlers = <%= UseHttpHandlers.Value %>;
 </script>
-<script type='text/javascript' src='<%= URL.Value %>/document-viewer/GetScriptHandler?name=GroupdocsViewer.all.min.js'></script>
-<link rel='stylesheet' type='text/css' href='<%= URL.Value %>/document-viewer/CSS/GetCssHandler?name=bootstrap.css' />
-<link rel='stylesheet' type='text/css' href='<%= URL.Value %>/document-viewer/CSS/GetCssHandler?name=GroupdocsViewer.all.min.css' />
-<link rel='stylesheet' type='text/css' href='<%= URL.Value %>/document-viewer/CSS/GetCssHandler?name=jquery-ui-1.10.3.dialog.min.css' />
+<script type='text/javascript' src='<%= URL.Value %>/document-viewer/GetScript<%= UrlNameSufix.Value %>?name=GroupdocsViewer.all.min.js'></script>
+<link rel='stylesheet' type='text/css' href='<%= URL.Value %>/document-viewer/CSS/GetCss<%= UrlNameSufix.Value %>?name=bootstrap.css' />
+<link rel='stylesheet' type='text/css' href='<%= URL.Value %>/document-viewer/CSS/GetCss<%= UrlNameSufix.Value %>?name=GroupdocsViewer.all.min.css' />
+<link rel='stylesheet' type='text/css' href='<%= URL.Value %>/document-viewer/CSS/GetCss<%= UrlNameSufix.Value %>?name=jquery-ui-1.10.3.dialog.min.css' />
 
 
 <div id="groupdocs-viewer"></div>

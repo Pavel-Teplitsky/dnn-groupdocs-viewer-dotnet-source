@@ -78,6 +78,14 @@ namespace DotNetNuke.Modules.DnnInstallableViewer
                 if (Settings.Contains("UseHttpHandlers"))
                 {
                     UseHttpHandlers.Value = String.Format("{0}", Settings["UseHttpHandlers"]);
+                    if (Boolean.Parse(Settings["UseHttpHandlers"].ToString()) == true)
+                    {
+                        UrlNameSufix.Value = "Handler";
+                    }
+                    else
+                    {
+                        UrlNameSufix.Value = "";
+                    }
                 }
             }
             catch (Exception exc) //Module failed to load
