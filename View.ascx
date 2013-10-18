@@ -4,9 +4,11 @@
 <asp:HiddenField runat="server" ID="Width" Value="800" />
 <asp:HiddenField runat="server" ID="Height" Value="600" />
 <asp:HiddenField runat="server" ID="DefaultFileName" />
+<asp:HiddenField runat="server" ID="UseHttpHandlers" Value="false" />
 
 <% if (URL.Value != null && URL.Value.Length > 0) %>
-<% { %><!-- <script type='text/javascript' src='<%= URL.Value %>/document-viewer/GetScriptHandler?name=libs/jquery-1.9.1.min.js'></script> -->
+<% { %>
+<!-- <script type='text/javascript' src='<%= URL.Value %>/document-viewer/GetScriptHandler?name=libs/jquery-1.9.1.min.js'></script> -->
 <!-- <script type='text/javascript' src='<%= URL.Value %>/document-viewer/GetScriptHandler?name=libs/jquery-ui-1.10.3.min.js'></script> -->
 <script type='text/javascript' src='<%= URL.Value %>/document-viewer/GetScriptHandler?name=libs/knockout-2.2.1.js'></script>
 <script type='text/javascript' src='<%= URL.Value %>/document-viewer/GetScriptHandler?name=libs/turn.min.js'></script>
@@ -26,7 +28,7 @@
 	$.fn.jGroupdocsViewer.applicationPath = '<%= URL.Value %>/';
 </script>
 <script type='text/javascript'>
-	$.fn.jGroupdocsViewer.useHttpHandlers = true;
+	$.fn.jGroupdocsViewer.useHttpHandlers = <%= UseHttpHandlers.Value %>;
 </script>
 <script type='text/javascript' src='<%= URL.Value %>/document-viewer/GetScriptHandler?name=GroupdocsViewer.all.min.js'></script>
 <link rel='stylesheet' type='text/css' href='<%= URL.Value %>/document-viewer/CSS/GetCssHandler?name=bootstrap.css' />

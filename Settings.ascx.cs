@@ -41,7 +41,6 @@ namespace DotNetNuke.Modules.DnnInstallableViewer
     public partial class Settings : ModuleSettingsBase
     {
 
-        #region Base Method Implementations
 
         /// -----------------------------------------------------------------------------
         /// <summary>
@@ -70,6 +69,10 @@ namespace DotNetNuke.Modules.DnnInstallableViewer
                     {
                         txtDefaultFileName.Text = Settings["DefaultFileName"].ToString();
                     }
+                    if (Settings.Contains("UseHttpHandlers"))
+                    {
+                        ckbUseHttpHandlers.Checked = Boolean.Parse(Settings["UseHttpHandlers"].ToString());
+                    }
                 }
             }
             catch (Exception exc) //Module failed to load
@@ -95,16 +98,13 @@ namespace DotNetNuke.Modules.DnnInstallableViewer
                 modules.UpdateModuleSetting(ModuleId, "Width", txtWidth.Text);
                 modules.UpdateModuleSetting(ModuleId, "Height", txtHeight.Text);
                 modules.UpdateModuleSetting(ModuleId, "DefaultFileName", txtDefaultFileName.Text);
+                modules.UpdateModuleSetting(ModuleId, "UseHttpHandlers", ckbUseHttpHandlers.Checked.ToString().ToLower());
             }
             catch (Exception exc) //Module failed to load
             {
                 Exceptions.ProcessModuleLoadException(this, exc);
             }
         }
-
-        #endregion
-
     }
-
 }
 

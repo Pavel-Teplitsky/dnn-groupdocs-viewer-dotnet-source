@@ -38,8 +38,6 @@ namespace DotNetNuke.Modules.DnnInstallableViewer
     public partial class View : ModuleSettingsBase, IActionable
     {
 
-        #region Event Handlers
-
         override protected void OnInit(EventArgs e)
         {
             InitializeComponent();
@@ -77,14 +75,16 @@ namespace DotNetNuke.Modules.DnnInstallableViewer
                 {
                     DefaultFileName.Value = String.Format("{0}", Settings["DefaultFileName"]);
                 }
+                if (Settings.Contains("UseHttpHandlers"))
+                {
+                    UseHttpHandlers.Value = String.Format("{0}", Settings["UseHttpHandlers"]);
+                }
             }
             catch (Exception exc) //Module failed to load
             {
                 Exceptions.ProcessModuleLoadException(this, exc);
             }
         }
-
-        #endregion
 
         #region Optional Interfaces
 

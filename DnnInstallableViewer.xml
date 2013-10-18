@@ -112,6 +112,24 @@
             Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
             </remarks>
         </member>
+        <member name="F:DotNetNuke.Modules.DnnInstallableViewer.Settings.lblUseHttpHandlers">
+            <summary>
+            lblUseHttpHandlers элемент управления.
+            </summary>
+            <remarks>
+            Автоматически создаваемое поле.
+            Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.Modules.DnnInstallableViewer.Settings.ckbUseHttpHandlers">
+            <summary>
+            ckbUseHttpHandlers элемент управления.
+            </summary>
+            <remarks>
+            Автоматически создаваемое поле.
+            Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
+            </remarks>
+        </member>
         <member name="T:DotNetNuke.Modules.DnnInstallableViewer.View">
             -----------------------------------------------------------------------------
             <summary>
@@ -157,6 +175,15 @@
         <member name="F:DotNetNuke.Modules.DnnInstallableViewer.View.DefaultFileName">
             <summary>
             DefaultFileName элемент управления.
+            </summary>
+            <remarks>
+            Автоматически создаваемое поле.
+            Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.Modules.DnnInstallableViewer.View.UseHttpHandlers">
+            <summary>
+            UseHttpHandlers элемент управления.
             </summary>
             <remarks>
             Автоматически создаваемое поле.

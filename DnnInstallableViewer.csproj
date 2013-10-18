@@ -134,7 +134,9 @@
     </None>
     <Content Include="packages.config" />
     <None Include="Providers\DataProviders\SqlDataProvider\00.00.01.SqlDataProvider" />
-    <None Include="DnnInstallableViewer.dnn" />
+    <None Include="DnnInstallableViewer.dnn">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Providers\DataProviders\SqlDataProvider\Uninstall.SqlDataProvider" />
     <None Include="module.css" />
     <None Include="ReleaseNotes.txt" />
