@@ -47,5 +47,23 @@ namespace DotNetNuke.Modules.DnnInstallableViewer {
         /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
         /// </remarks>
         protected global::System.Web.UI.WebControls.HiddenField DefaultFileName;
+        
+        /// <summary>
+        /// ltrScript элемент управления.
+        /// </summary>
+        /// <remarks>
+        /// Автоматически создаваемое поле.
+        /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Literal ltrScript;
+        
+        /// <summary>
+        /// ltrContent элемент управления.
+        /// </summary>
+        /// <remarks>
+        /// Автоматически создаваемое поле.
+        /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Literal ltrContent;
     }
 }

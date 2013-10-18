@@ -84,6 +84,8 @@
     </CreateItem>
 
     <Copy SourceFiles="$(MSBuildDnnBinPath)\$(AssemblyName).dll" DestinationFolder="$(MSBuildProjectDirectory)\Package\bin"/>
+    <!-- http://www.dnnsoftware.com/community-blog/cid/132135/Including-additional-DLL-rsquo-s-in-an-MSBuild-script-for-Module-Packaging -->
+    <Copy SourceFiles="$(MSBuildProjectDirectory)\lib\Groupdocs.Viewer.dll" DestinationFolder="$(MSBuildProjectDirectory)\Package\bin"/>
     <Copy SourceFiles="@(SqlDataProviderFiles)" DestinationFolder="$(MSBuildProjectDirectory)\Package\%(RecursiveDir)" />
     <Copy SourceFiles="@(PackageManifestFiles)" DestinationFolder="$(MSBuildProjectDirectory)\Package" />
     <Copy SourceFiles="@(PackageTxtFiles)" DestinationFolder="$(MSBuildProjectDirectory)\Package" />
@@ -112,6 +114,8 @@
 
     
     <Copy SourceFiles="$(MSBuildDnnBinPath)\$(AssemblyName).dll" DestinationFolder="$(MSBuildProjectDirectory)\Package\bin"/>
+    <!-- http://www.dnnsoftware.com/community-blog/cid/132135/Including-additional-DLL-rsquo-s-in-an-MSBuild-script-for-Module-Packaging -->
+    <Copy SourceFiles="$(MSBuildProjectDirectory)\lib\Groupdocs.Viewer.dll" DestinationFolder="$(MSBuildProjectDirectory)\Package\bin"/>
     <Copy SourceFiles="@(SqlDataProviderFiles)" DestinationFolder="$(MSBuildProjectDirectory)\Package\%(RecursiveDir)" />
     <Copy SourceFiles="@(PackageManifestFiles)" DestinationFolder="$(MSBuildProjectDirectory)\Package" />
     <Copy SourceFiles="@(PackageTxtFiles)" DestinationFolder="$(MSBuildProjectDirectory)\Package" />

@@ -77,6 +77,17 @@ namespace DotNetNuke.Modules.DnnInstallableViewer
                 {
                     DefaultFileName.Value = String.Format("{0}", Settings["DefaultFileName"]);
                 }
+
+                ltrScript.Text = Groupdocs.Web.UI.Viewer.CreateScriptLoadBlock().ToString();
+                ltrContent.Text = Groupdocs.Web.UI.Viewer.ClientCode()
+                    .TargetElementSelector("#test")
+                    .FilePath("")
+                    .DocViewerId("doc_viewer1")
+                    .EnableRightClickMenu(true)
+                    .ShowThumbnails(true)
+                    .OpenThumbnails(true)
+                    .ZoomToFitWidth().ToString();
+
             }
             catch (Exception exc) //Module failed to load
             {

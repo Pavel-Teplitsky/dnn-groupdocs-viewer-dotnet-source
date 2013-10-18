@@ -95,8 +95,70 @@
             <assembly>
               <name>DnnInstallableViewer.dll</name>
             </assembly>
+            <assembly>
+              <name>Groupdocs.Viewer.dll</name>
+            </assembly>
           </assemblies>
         </component>
+
+        
+        
+        <component type="Config">
+          <config>
+            <configFile>web.config</configFile>
+            <install>
+              <configuration>
+                <nodes>
+                  <node path="/configuration/system.web/httpModules" action="update" key="path" collision="overwrite">
+                    <add name="AllowCrossOriginModule" type="Groupdocs.Web.UI.HttpModules.AllowCrossOriginModule, Groupdocs.Viewer, Culture=neutral" />
+                  </node>
+                  <node path="/configuration/system.web/httpHandlers" action="update" key="path" collision="overwrite">
+                    <add verb="OPTIONS" path="*" type="Groupdocs.Web.UI.Handlers.CrossOriginHandler, Groupdocs.Viewer, Culture=neutral" />
+                    <add verb="*" path="document-viewer/ViewDocumentHandler" type="Groupdocs.Web.UI.Handlers.ViewDocumentHandler, Groupdocs.Viewer, Culture=neutral" validate="false" />
+                    <add verb="*" path="document-viewer/GetDocumentPageImageHandler" type="Groupdocs.Web.UI.Handlers.GetDocumentPageImageHandler, Groupdocs.Viewer, Culture=neutral" validate="false" />
+                    <add verb="*" path="document-viewer/LoadFileBrowserTreeDataHandler" type="Groupdocs.Web.UI.Handlers.LoadFileBrowserTreeDataHandler, Groupdocs.Viewer, Culture=neutral" validate="false" />
+                    <add verb="*" path="document-viewer/GetImageUrlsHandler" type="Groupdocs.Web.UI.Handlers.GetImageUrlsHandler, Groupdocs.Viewer, Culture=neutral" validate="false" />
+                    <add verb="GET" path="document-viewer/CSS/GetCssHandler" type="Groupdocs.Web.UI.Handlers.CssHandler, Groupdocs.Viewer, Culture=neutral" validate="false" />
+                    <add verb="GET" path="document-viewer/images/*" type="Groupdocs.Web.UI.Handlers.EmbeddedImageHandler, Groupdocs.Viewer, Culture=neutral" validate="false" />
+                    <add verb="GET,POST" path="document-viewer/GetScriptHandler" type="Groupdocs.Web.UI.Handlers.ScriptHandler, Groupdocs.Viewer, Culture=neutral" validate="false" />
+                    <add verb="GET" path="document-viewer/GetFileHandler" type="Groupdocs.Web.UI.Handlers.GetFileHandler, Groupdocs.Viewer, Culture=neutral" validate="false" />
+                    <add verb="GET,POST" path="document-viewer/GetPdf2JavaScriptHandler" type="Groupdocs.Web.UI.Handlers.GetPdf2JavaScriptHandler, Groupdocs.Viewer, Culture=neutral" validate="false" />
+                    <add verb="GET,POST" path="document-viewer/GetPdfWithPrintDialogHandler" type="Groupdocs.Web.UI.Handlers.GetPdfWithPrintDialogHandler, Groupdocs.Viewer, Culture=neutral" validate="false" />
+                    <add verb="GET,POST" path="document-viewer/GetPrintableHtmlHandler" type="Groupdocs.Web.UI.Handlers.GetPrintableHtmlHandler, Groupdocs.Viewer, Culture=neutral" />
+                  </node>
+                  <node path="/configuration/system.webServer/modules" action="update" key="name" collision="overwrite">
+                    <add name="AllowCrossOriginModule" preCondition="managedHandler" type="Groupdocs.Web.UI.HttpModules.AllowCrossOriginModule, Groupdocs.Viewer, Culture=neutral" />
+                  </node>
+                  <node path="/configuration/system.webServer/handlers" action="update" key="name" collision="overwrite">
+                    <add name="CrossOriginHandler" verb="OPTIONS" path="*" type="Groupdocs.Web.UI.Handlers.CrossOriginHandler, Groupdocs.Viewer, Culture=neutral" />
+                    <!-- Classic mode handlers for URLs like image/sprites.png -->
+                    <!--<add name="GroupdocsViewerClassicMode32" path="document-viewer/images/*" verb="*" modules="IsapiModule" scriptProcessor="C:\Windows\Microsoft.NET\Framework\v4.0.30319\aspnet_isapi.dll" resourceType="Unspecified" preCondition="classicMode,runtimeVersionv4.0,bitness32" />-->
+                    <!--<add name="GroupdocsViewerClassicMode64" path="document-viewer/images/*" verb="GET" modules="IsapiModule" scriptProcessor="C:\Windows\Microsoft.NET\Framework64\v4.0.30319\aspnet_isapi.dll" resourceType="Unspecified" preCondition="classicMode,runtimeVersionv4.0,bitness64" />-->
+                    <add name="ViewDocumentHandler" verb="*" path="document-viewer/ViewDocumentHandler" type="Groupdocs.Web.UI.Handlers.ViewDocumentHandler, Groupdocs.Viewer, Culture=neutral" />
+                    <add name="GetDocumentPageImageHandler" verb="*" path="document-viewer/GetDocumentPageImageHandler" type="Groupdocs.Web.UI.Handlers.GetDocumentPageImageHandler, Groupdocs.Viewer,Culture=neutral" />
+                    <add name="LoadFileBrowserTreeDataHandler" verb="*" path="document-viewer/LoadFileBrowserTreeDataHandler" type="Groupdocs.Web.UI.Handlers.LoadFileBrowserTreeDataHandler, Groupdocs.Viewer, Culture=neutral" />
+                    <add name="GetImageUrlsHandler" verb="*" path="document-viewer/GetImageUrlsHandler" type="Groupdocs.Web.UI.Handlers.GetImageUrlsHandler, Groupdocs.Viewer, Culture=neutral" />
+                    <add name="GetCssHandler" verb="GET" path="document-viewer/CSS/GetCssHandler" type="Groupdocs.Web.UI.Handlers.CssHandler, Groupdocs.Viewer, Culture=neutral" />
+                    <add name="images" verb="GET" path="document-viewer/images/*" type="Groupdocs.Web.UI.Handlers.EmbeddedImageHandler, Groupdocs.Viewer, Culture=neutral" />
+                    <add name="GetScriptHandler" verb="GET,POST" path="document-viewer/GetScriptHandler" type="Groupdocs.Web.UI.Handlers.ScriptHandler, Groupdocs.Viewer, Culture=neutral" />
+                    <add name="GetFileHandler" verb="GET" path="document-viewer/GetFileHandler" type="Groupdocs.Web.UI.Handlers.GetFileHandler, Groupdocs.Viewer, Culture=neutral" />
+                    <add name="GetPdf2JavaScriptHandler" verb="GET,POST" path="document-viewer/GetPdf2JavaScriptHandler" type="Groupdocs.Web.UI.Handlers.GetPdf2JavaScriptHandler, Groupdocs.Viewer, Culture=neutral" />
+                    <add name="GetPdfWithPrintDialogHandler" verb="GET,POST" path="document-viewer/GetPdfWithPrintDialogHandler" type="Groupdocs.Web.UI.Handlers.GetPdfWithPrintDialogHandler, Groupdocs.Viewer, Culture=neutral" />
+                    <add name="GetPrintableHtmlHandler" verb="GET,POST" path="document-viewer/GetPrintableHtmlHandler" type="Groupdocs.Web.UI.Handlers.GetPrintableHtmlHandler, Groupdocs.Viewer, Culture=neutral" />
+                  </node>
+                </nodes>
+              </configuration>
+            </install>
+            <uninstall>
+              <configuration>
+                <nodes />
+              </configuration>
+            </uninstall>
+          </config>
+        </component>
+
+        
+        
       </components>
     </package>
   </packages>

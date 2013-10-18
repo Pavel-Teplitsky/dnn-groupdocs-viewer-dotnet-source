@@ -112,6 +112,27 @@
             Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
             </remarks>
         </member>
+        <member name="T:DotNetNuke.Modules.DnnInstallableViewer.ServiceRouteMapper">
+            -----------------------------------------------------------------------------
+            <summary>
+            
+            </summary>
+            -----------------------------------------------------------------------------
+        </member>
+        <member name="M:DotNetNuke.Modules.DnnInstallableViewer.ServiceRouteMapper.RegisterRoutes(DotNetNuke.Web.Api.IMapRoute)">
+            -----------------------------------------------------------------------------
+            <summary>
+            
+            </summary>
+            -----------------------------------------------------------------------------
+        </member>
+        <member name="M:DotNetNuke.Modules.DnnInstallableViewer.ServiceRouteMapper.CreateRootDirectoryForModuleFiles(System.String)">
+            -----------------------------------------------------------------------------
+            <summary>
+            
+            </summary>
+            -----------------------------------------------------------------------------
+        </member>
         <member name="T:DotNetNuke.Modules.DnnInstallableViewer.View">
             -----------------------------------------------------------------------------
             <summary>
@@ -157,6 +178,24 @@
         <member name="F:DotNetNuke.Modules.DnnInstallableViewer.View.DefaultFileName">
             <summary>
             DefaultFileName элемент управления.
+            </summary>
+            <remarks>
+            Автоматически создаваемое поле.
+            Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.Modules.DnnInstallableViewer.View.ltrScript">
+            <summary>
+            ltrScript элемент управления.
+            </summary>
+            <remarks>
+            Автоматически создаваемое поле.
+            Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.Modules.DnnInstallableViewer.View.ltrContent">
+            <summary>
+            ltrContent элемент управления.
             </summary>
             <remarks>
             Автоматически создаваемое поле.
@@ -267,6 +306,22 @@
             In most cases you will only modify the Public methods region below.
             </summary>
             -----------------------------------------------------------------------------
+        </member>
+        <member name="T:DotNetNuke.Modules.DnnInstallableViewer.Properties.Resources">
+            <summary>
+              Класс ресурса со строгой типизацией для поиска локализованных строк и т.д.
+            </summary>
+        </member>
+        <member name="P:DotNetNuke.Modules.DnnInstallableViewer.Properties.Resources.ResourceManager">
+            <summary>
+              Возвращает кэшированный экземпляр ResourceManager, использованный этим классом.
+            </summary>
+        </member>
+        <member name="P:DotNetNuke.Modules.DnnInstallableViewer.Properties.Resources.Culture">
+            <summary>
+              Перезаписывает свойство CurrentUICulture текущего потока для всех
+              обращений к ресурсу с помощью этого класса ресурса со строгой типизацией.
+            </summary>
         </member>
     </members>
 </doc>
